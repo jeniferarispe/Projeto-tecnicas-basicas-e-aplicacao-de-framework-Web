@@ -1,0 +1,16 @@
+<h1>Editar Categoria: {{categoria.nome}}</h1>
+
+<form action="/categorias/editarCategoriaPost" method="POST">
+<input type="hidden" name="id" value="{{categoria._id}}">
+<div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="nome">Nome</label>
+      <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome" value="{{categoria.nome}}">
+    </div>
+  </div>
+
+
+    
+    <button type="submit"  class="btn btn-primary">Editar Categoria</button>
+</div>
+    </form>

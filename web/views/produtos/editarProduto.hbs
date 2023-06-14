@@ -1,0 +1,30 @@
+<h1>Editar Produto: {{produto.nome}}</h1>
+<div class="card">
+  <div class="card-body">
+
+<form action="/produtos/editarProdutoPost" method="POST">
+<input type="hidden" name="id" value="{{produto._id}}">
+ <div class="form-row">
+    <div class="form-group col-md-4">
+<label for="nomeproduto">Nome Produto:</label><br>
+<input type="text" name="nome" id="nome" class="form-control" placeholder="Nome do Produto"  value="{{produto.nome}}" ><br>
+    </div>
+ </div>
+ <div class="form-row">
+    <div class="form-group col-md-4">
+<label for="descproduto">Descrição do Produto:</label><br>
+<input type="text"  name="descricao" id="descricao" class="form-control" placeholder="Descrição do Produto"  value="{{produto.descricao}}"><br>
+    </div>
+ </div>
+  <div class="form-row">
+    <div class="form-group col-md-4">
+<label for="valor">Valor:</label><br>
+<input type="number"  name="valor" id="valor"  class="form-control" placeholder="Valor do Produto"  value="{{produto.valor}}"><br>
+
+    </div>
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Editar</button>
+  </form>
+    </div>
+</div>

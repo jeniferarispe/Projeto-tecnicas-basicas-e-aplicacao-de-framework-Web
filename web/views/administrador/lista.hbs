@@ -1,0 +1,44 @@
+{{#each erros}}
+    <div class="alert alert-danger">{{texto}}</div>
+{{else}}
+{{#each acertos}}
+    <div class="alert alert-success">{{texto}}</div>
+{{else}}
+
+{{/each}}
+
+{{/each}}
+<h1>Lista: </h1>
+
+{{#each admin}}  
+  <div class="form-row">
+    
+    <div class="form-group col-md-6">
+      <label for="nome">Nome: </label>
+      <input class="alert alert-secondary "  value={{this.nome}}>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="email">Email</label>
+      <input class="alert alert-secondary"  value={{this.email}} >
+    </div>
+  </div>
+ 
+  
+   
+      <!--  <div class="form-row">
+          <div class="form-group col-md-1">
+               <form action="/administrador/deletarAdmin" method="post">
+                    <input type="hidden" name="id", value="{{_id}}">
+                    <button class="btn btn-danger">Deletar</button></a>     
+                </form>
+          </div>
+       
+        </div>
+        -->
+  
+  <hr>
+{{else}}
+    <h5>Nenhum admin cadastrado</h5>
+{{/each}}
